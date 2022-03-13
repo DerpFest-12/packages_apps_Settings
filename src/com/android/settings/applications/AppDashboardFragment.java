@@ -18,7 +18,16 @@ package com.android.settings.applications;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.os.Bundle;
+import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
+
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceGroup;
+
+import com.android.internal.util.derp.derpUtils.LauncherUtils;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -26,16 +35,27 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.derp.support.preferences.SwitchPreference;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /** Settings page for apps. */
 @SearchIndexable
-public class AppDashboardFragment extends DashboardFragment {
+public class AppDashboardFragment extends DashboardFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "AppDashboardFragment";
     private AppsPreferenceController mAppsPreferenceController;
+
+    private static final String KEY_MISC = "app_info_misc";
+
+    private static final String KEY_ENABLE_LAWNCHAIR = "enable_lawnchair";
+    private static final String KEY_LAWNCHAIR_INFO = "enable_lawnchair_info";
+
+    private SwitchPreference mEnableLawnchair;
+    private Preference mLawnchairInfo;
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(Context context) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
@@ -74,6 +94,32 @@ public class AppDashboardFragment extends DashboardFragment {
         final HibernatedAppsPreferenceController hibernatedAppsPreferenceController =
                 use(HibernatedAppsPreferenceController.class);
         getSettingsLifecycle().addObserver(hibernatedAppsPreferenceController);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mEnableLawnchair = (SwitchPreference) findPreference(KEY_ENABLE_LAWNCHAIR);
+        mLawnchairInfo = (Preference) findPreference(KEY_LAWNCHAIR_INFO);
+
+        if (!LauncherUtils.isAvailable(getContext())) {
+            ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mEnableLawnchair);
+            ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mLawnchairInfo);
+        } else {
+            mEnableLawnchair.setChecked(LauncherUtils.getLastStatus());
+            mEnableLawnchair.setOnPreferenceChangeListener(this);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mEnableLawnchair) {
+            boolean value = (Boolean) newValue;
+            LauncherUtils.setEnabled(value);
+            LauncherUtils.setLastStatus(value);
+            return true;
+        }
+        return false;
     }
 
     @Override

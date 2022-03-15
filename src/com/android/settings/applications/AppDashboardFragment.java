@@ -102,13 +102,8 @@ public class AppDashboardFragment extends DashboardFragment implements
         mEnableLawnchair = (SwitchPreference) findPreference(KEY_ENABLE_LAWNCHAIR);
         mLawnchairInfo = (Preference) findPreference(KEY_LAWNCHAIR_INFO);
 
-        if (!LauncherUtils.isAvailable(getContext())) {
-            ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mEnableLawnchair);
-            ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mLawnchairInfo);
-        } else {
-            mEnableLawnchair.setChecked(LauncherUtils.getLastStatus());
-            mEnableLawnchair.setOnPreferenceChangeListener(this);
-        }
+        ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mEnableLawnchair);
+        ((PreferenceGroup) findPreference(KEY_MISC)).removePreference(mLawnchairInfo);
     }
 
     @Override

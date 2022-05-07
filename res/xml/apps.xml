@@ -102,15 +102,13 @@
         android:title="@string/launcher_switcher_category"
         android:order="200">
 
-        <com.derp.support.preferences.SwitchPreference
-            android:key="enable_lawnchair"
-            android:title="@string/enable_lawnchair_title"
-            android:summary="@string/enable_lawnchair_summary"/>
+        <ListPreference
+            android:key="launcher_switcher"
+            android:title="@string/launcher_switcher_title"/>
 
-        <Preference
-            android:key="enable_lawnchair_info"
-            android:icon="@drawable/ic_info_outline"
-            android:summary="@string/enable_lawnchair_info"
+        <com.android.settingslib.widget.FooterPreference
+            android:key="launcher_switcher_info"
+            android:title="@string/launcher_switcher_info"
             android:selectable="false"
             settings:searchable="false"/>
     </PreferenceCategory>

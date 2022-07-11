@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 DerpFest
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- Back swipe actions -->
+    <string-array name="swipe_actions_entries" translatable="false">
+        <item>@string/action_nothing</item>
+        <item>@string/action_voice_search</item>
+        <item>@string/action_launch_camera</item>
+        <item>@string/action_flashlight</item>
+        <item>@string/action_app_action</item>
+        <item>@string/action_volume_panel</item>
+        <item>@string/action_screen_off</item>
+        <item>@string/action_screenshot</item>
+        <item>@string/action_notifications</item>
+        <item>@string/action_qs_panel</item>
+        <item>@string/action_clear_notifications</item>
+        <item>@string/action_ringer_modes</item>
+        <item>@string/kill_app</item>
+        <item>@string/skip_song</item>
+        <item>@string/prev_song</item>
+        <item>@string/show_powermenu</item>
+        <item>@string/partial_screenshot</item>
+        <item>@string/hush_mute</item>
+    </string-array>
+
+    <string-array name="swipe_actions_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+    </string-array>
+
+    <string-array name="long_back_swipe_timeout_entries">
+       <item>250 ms</item>
+       <item>300 ms</item>
+       <item>500 ms</item>
+       <item>1000 ms</item>
+       <item>1500 ms</item>
+       <item>2000 ms</item>
+    </string-array>
+
+    <string-array name="long_back_swipe_timeout_values" translatable="false">
+       <item>250</item>
+       <item>300</item>
+       <item>500</item>
+       <item>1000</item>
+       <item>1500</item>
+       <item>2000</item>
+    </string-array>
+
+    <!-- Random summary -->
+    <string-array name="derpspace_summaries">
+        <item>Non preoccuparti di fallire. Preoccupati di non averci provato</item>
+        <item>La gente è il più grande spettacolo del mondo. E non si paga il biglietto</item>
+        <item>Se giudichi le persone, non avrai tempo per amarle</item>
+        <item>Tutti pensano a cambiare il mondo, ma nessuno pensa a cambiar se stesso</item>
+        <item>Ama la vita più della sua logica, solo allora ne capirai il senso</item>
+        <item>Bisogna avere un caos dentro di sé per partorire una stella danzante</item>
+        <item>La vita non è un problema da risolvere ma un mistero da vivere</item>
+        <item>La logica ti porterà dalla A alla B. L\'immaginazione ti porterà ovunque</item>
+        <item>Tutto ciò che hai sempre desiderato è dall\'altra parte della paura</item>
+        <item>Il futuro appartiene a coloro che credono nella bellezza dei propri sogni</item>
+        <item>Cadi sette volte. Rialzati otto</item>
+        <item>Il mondo è un bel posto e vale la pena lottare per esso</item>
+        <item>Il sorriso permette all\'anima di respirare</item>
+        <item>Se dici sì, assicurati di non dire no a te stesso</item>
+        <item>Mira alla luna. Anche se sbagli, atterrerai tra le stelle</item>
+        <item>Anche un viaggio di mille miglia inizia con un singolo passo</item>
+        <item>Sii il cambiamento che vuoi vedere nel mondo</item>
+        <item>Questa è la tua vita, e sta finendo un minuto alla volta</item>
+        <item>Ricorda, oggi è il domani di cui ti preoccupavi ieri</item>
+        <item>La felicità è reale solo quand\'è condivisa</item>
+        <item>Morire non è nulla, non vivere è spaventoso</item>
+        <item>Se l\'opportunità non bussa, costruisci una porta</item>
+        <item>La vita senza musica sarebbe un errore</item>
+        <item>Non aspettare. Non sarà mai il momento giusto</item>
+        <item>È meglio essere soli, che in cattiva compagnia</item>
+        <item>Fa più rumore un albero che cade di una foresta che cresce</item>
+        <item>L\'unico vero errore è quello da cui non impariamo nulla</item>
+        <item>Creare è vivere due volte</item>
+        <item>Siamo fatti della stessa sostanza dei sogni</item>
+        <item>Se obbedisci alle regole, ti perdi tutto il divertimento</item>
+        <item>Fai ogni giorno una cosa che ti spaventa</item>
+        <item>È più facile spezzare un atomo che un pregiudizio</item>
+        <item>Se puoi sognarlo, puoi farlo</item>
+        <item>Niente è permanente eccetto il cambiamento</item>
+        <item>Posso resistere a tutto tranne che alle tentazioni</item>
+        <item>Ciò che non ti uccide ti rende più forte</item>
+    </string-array>
+
+    <!-- Auto reboot settings. The delay in activity before a locked device is rebooted. These are shown in a list dialog. -->
+    <string-array name="device_reboot_timeout_entries">
+        <item>@string/device_reboot_timeout_summary_never</item>
+        <item>@string/device_reboot_timeout_summary_1hour</item>
+        <item>@string/device_reboot_timeout_summary_2hours</item>
+        <item>@string/device_reboot_timeout_summary_4hours</item>
+        <item>@string/device_reboot_timeout_summary_8hours</item>
+        <item>@string/device_reboot_timeout_summary_12hours</item>
+        <item>@string/device_reboot_timeout_summary_24hours</item>
+        <item>@string/device_reboot_timeout_summary_36hours</item>
+        <item>@string/device_reboot_timeout_summary_48hours</item>
+        <item>@string/device_reboot_timeout_summary_72hours</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="device_reboot_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>3600000</item>
+        <!-- Do not translate. -->
+        <item>7200000</item>
+        <!-- Do not translate. -->
+        <item>14400000</item>
+        <!-- Do not translate. -->
+        <item>28800000</item>
+        <!-- Do not translate. -->
+        <item>43200000</item>
+        <!-- Do not translate. -->
+        <item>86400000</item>
+        <!-- Do not translate. -->
+        <item>129600000</item>
+        <!-- Do not translate. -->
+        <item>172800000</item>
+        <!-- Do not translate. -->
+        <item>259200000</item>
+    </string-array>
+
+    <!-- Bluetooth settings.  The delay in inactivity before bluetooth is turned off. These are shown in a list dialog. -->
+    <string-array name="bluetooth_timeout_entries">
+        <item>@string/bluetooth_timeout_summary_never</item>
+        <item>@string/bluetooth_timeout_summary_15secs</item>
+        <item>@string/bluetooth_timeout_summary_30secs</item>
+        <item>@string/bluetooth_timeout_summary_1min</item>
+        <item>@string/bluetooth_timeout_summary_2mins</item>
+        <item>@string/bluetooth_timeout_summary_5mins</item>
+        <item>@string/bluetooth_timeout_summary_10mins</item>
+        <item>@string/bluetooth_timeout_summary_30mins</item>
+        <item>@string/bluetooth_timeout_summary_1hour</item>
+        <item>@string/bluetooth_timeout_summary_2hours</item>
+        <item>@string/bluetooth_timeout_summary_4hours</item>
+        <item>@string/bluetooth_timeout_summary_8hours</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="bluetooth_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>15000</item>
+        <!-- Do not translate. -->
+        <item>30000</item>
+        <!-- Do not translate. -->
+        <item>60000</item>
+        <!-- Do not translate. -->
+        <item>120000</item>
+        <!-- Do not translate. -->
+        <item>300000</item>
+        <!-- Do not translate. -->
+        <item>600000</item>
+        <!-- Do not translate. -->
+        <item>1800000</item>
+        <!-- Do not translate. -->
+        <item>3600000</item>
+        <!-- Do not translate. -->
+        <item>7200000</item>
+        <!-- Do not translate. -->
+        <item>14400000</item>
+        <!-- Do not translate. -->
+        <item>28800000</item>
+    </string-array>
+
+    <!-- Wifi settings.  The delay in inactivity before wifi is turned off. These are shown in a list dialog. -->
+    <string-array name="wifi_timeout_entries">
+        <item>@string/wifi_timeout_summary_never</item>
+        <item>@string/wifi_timeout_summary_15secs</item>
+        <item>@string/wifi_timeout_summary_30secs</item>
+        <item>@string/wifi_timeout_summary_1min</item>
+        <item>@string/wifi_timeout_summary_2mins</item>
+        <item>@string/wifi_timeout_summary_5mins</item>
+        <item>@string/wifi_timeout_summary_10mins</item>
+        <item>@string/wifi_timeout_summary_30mins</item>
+        <item>@string/wifi_timeout_summary_1hour</item>
+        <item>@string/wifi_timeout_summary_2hours</item>
+        <item>@string/wifi_timeout_summary_4hours</item>
+        <item>@string/wifi_timeout_summary_8hours</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="wifi_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>15000</item>
+        <!-- Do not translate. -->
+        <item>30000</item>
+        <!-- Do not translate. -->
+        <item>60000</item>
+        <!-- Do not translate. -->
+        <item>120000</item>
+        <!-- Do not translate. -->
+        <item>300000</item>
+        <!-- Do not translate. -->
+        <item>600000</item>
+        <!-- Do not translate. -->
+        <item>1800000</item>
+        <!-- Do not translate. -->
+        <item>3600000</item>
+        <!-- Do not translate. -->
+        <item>7200000</item>
+        <!-- Do not translate. -->
+        <item>14400000</item>
+        <!-- Do not translate. -->
+        <item>28800000</item>
+    </string-array>
+
+    <!--- Volume key cursor control -->
+    <string-array name="volume_key_cursor_control_entries">
+        <item>@string/volume_key_cursor_control_off</item>
+        <item>@string/volume_key_cursor_control_on</item>
+        <item>@string/volume_key_cursor_control_on_reverse</item>
+    </string-array>
+
+    <string-array name="volume_key_cursor_control_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Per-app notification settings: Timeout period in which the app notifications are muted. These are shown in a list dialog. -->
+    <string-array name="app_notification_sound_timeout_entries" translatable="false">
+        <item>@string/app_notification_sound_timeout_value_none</item>
+        <item>@string/app_notification_sound_timeout_value_10_seconds</item>
+        <item>@string/app_notification_sound_timeout_value_30_seconds</item>
+        <item>@string/app_notification_sound_timeout_value_1_minute</item>
+        <item>@string/app_notification_sound_timeout_value_5_minutes</item>
+        <item>@string/app_notification_sound_timeout_value_15_minutes</item>
+        <item>@string/app_notification_sound_timeout_value_30_minutes</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="app_notification_sound_timeout_values" translatable="false">
+        <item>0</item>
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+    </string-array>
+
+    <!-- Volume steps -->
+    <string-array name="volume_steps_entries" translatable="false">
+        <item>60</item>
+        <item>45</item>
+        <item>30</item>
+        <item>15</item>
+        <item>7</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Face Unlock -->
+    <string-array name="face_unlock_method_entries">
+        <item>@string/face_unlock_method_default</item>
+        <item>@string/face_unlock_method_swipe</item>
+    </string-array>
+    <string-array name="face_unlock_method_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- App lock timeout -->
+    <string-array name="app_lock_timeout_entries">
+        <item>@string/app_lock_5_seconds</item>
+        <item>@string/app_lock_10_seconds</item>
+        <item>@string/app_lock_30_seconds</item>
+        <item>@string/app_lock_1_minute</item>
+        <item>@string/app_lock_5_minutes</item>
+        <item>@string/app_lock_10_minutes</item>
+        <item>@string/app_lock_30_minutes</item>
+    </string-array>
+
+    <string-array name="app_lock_timeout_values" translatable="false">
+        <item>5000</item>
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1800000</item>
+    </string-array>
+
+</resources>
